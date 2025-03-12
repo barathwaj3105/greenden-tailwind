@@ -16,7 +16,7 @@
     ">
         <h1 class="text-2xl">Greenden</h1>
 
-        <svg class="h-6 w-6 md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        <svg id="menuicon" class="h-6 w-6 md:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
             stroke-width="1.5" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
@@ -35,11 +35,30 @@
         </ul>
     </nav>
 
+    <!--SIDE NAVBAR-->
+    <nav  id="sidenav" class="bg-green-100 fixed z-10 top-0 md:hidden transition-all duration-1000" style="width: 50%; height: 100vb;right: -50%; ">
+        <div class="text-right p-5 " id="">
+            <p id="closenav" class="inline cursor-pointer"> X</p>
+        </div>
+        <ul class=" flex flex-col gap-10 items-center text-gray-600 ">
+            <li>
+                <a class="hover:text-black hover:underline" href="index.html">Home</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="product.html">Products</a>
+            </li>
+            <li>
+                <a class="hover:underline hover:text-black" href="contact.html">Contacts</a>
+            </li>
+
+        </ul>
+    </nav>
+
     <!--OUR PRODUCTS-->
     <section class="text-center p-5">
         <h1 class="m-5 font-bold text-center text-2xl">Our Products</h1>
-        <input type="text" placeholder="Search for a Product..." class="border border-black inline p-2" style="width: 70%;">
-        <div class="grid grid-cols-2 md:grid-cols-4 mt-7 gap-5 ">
+        <input id="search" type="text" placeholder="Search for a Product..." class="border border-black inline p-2" style="width: 70%;">
+        <div id="productcontainer" class="grid grid-cols-2 md:grid-cols-4 mt-7 gap-5 ">
             <div>
                 <img class="inline hover:shadow-xl transform hover:-translate-y-2" src="./Images/bestseller_1.jpg">
                 <h1>Rose Plant</h1>
@@ -91,5 +110,9 @@
     </section>
 
 </body>
+
+<script src="product.js">
+
+</script>
 
 </html>
